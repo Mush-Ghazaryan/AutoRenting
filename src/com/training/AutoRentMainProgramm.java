@@ -9,10 +9,13 @@ public class AutoRentMainProgramm {
 
         FuelStation fuelStation = new FuelStation();
         fuelStation.calculatingMinutes();
+
         CostsPerCars costsPerCars = new CostsPerCars();
         costsPerCars.calculatingCarsCost();
+
         BalanceCount balanceCount = new BalanceCount();
         balanceCount.countingBalance();
-
     }
 }
+//*.iml
+// .idea/*
