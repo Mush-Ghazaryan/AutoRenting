@@ -3,7 +3,8 @@ package com.training;
 import java.util.Scanner;
 
 public class MasterClass {
-    public static double insurance;
+
+    public static String insAnswer;
     public static double rentingTime;
     private static double distanceToDrive;
     private static double speed;
@@ -36,14 +37,8 @@ public class MasterClass {
     }
     private void offeringInsurance(){
         System.out.println("Do You want to buy an insurance packet: Yes or No");
-        String insAnswer = input.nextLine();
-        if(insAnswer.equals("Yes")){
+        insAnswer = input.nextLine();
 
-            insurance = cost[CostsPerCars.index];
-            System.out.println("Insurance Fee for your choosen car will be:  " + " " + insurance + "$");
-        } else {
-            insurance = 0;
-        }
     }
 
     private void getDistanceToDrive() {

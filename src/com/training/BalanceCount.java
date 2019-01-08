@@ -17,7 +17,7 @@ public class BalanceCount {
         return balance;
     }
     private void calculatingBalanace() {
-        balance = balance - CostsPerCars.totalRentingPrice - MasterClass.insurance;
+        balance = balance - CostsPerCars.totalRentingPrice - CostsPerCars.insurance;
         System.out.println("Your account balance after subtracting is: " + balance + "$");
     }
 
