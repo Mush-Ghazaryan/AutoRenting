@@ -5,7 +5,7 @@ public class FuelStation {
 
     public static int fuelCharging;
 
-    public double calculatingMinutes() {
+    public void calculatingMinutes() {
         Scanner input = new Scanner(System.in);
         double min = 1;
         double max = (MasterClass.rentingTime * 60);
@@ -18,6 +18,6 @@ public class FuelStation {
                 System.out.println("You are driving " + i + " " + "minutes");
             }
         }
-        return fuelCharging;
+//        return fuelCharging;
     }
 }

@@ -3,7 +3,7 @@ package com.training;
 import java.util.Arrays;
 
 public class CostsPerCars {
-    private  int index;
+    public static int index;
     public static double totalRentingPrice;
 
     public void calculatingCarsCost() {
@@ -13,17 +13,17 @@ public class CostsPerCars {
     }
 
 
-    private int lookingForIndex() {
+    private void lookingForIndex() {
         index = Arrays.asList(MasterClass.carsList).indexOf(MasterClass.car);
-        return index;
+
     }
 
     private void calculatingCost() {
         int fuelPricePerLiter = 1;
 
-        totalRentingPrice = Math.round((MasterClass.cost[index] * MasterClass.rentingTime) + (fuelPricePerLiter * FuelStation.fuelCharging));
-        System.out.println("Total renting price for Ferrari is: " + totalRentingPrice + "$");
-        System.out.println("In which  Fuel charging cost is: " + fuelPricePerLiter * FuelStation.fuelCharging + "$");
-
+        totalRentingPrice = Math.round((MasterClass.cost[index] * MasterClass.rentingTime) + (fuelPricePerLiter * FuelStation.fuelCharging)+MasterClass.insurance);
+        System.out.println("Total renting price is: " + totalRentingPrice + "$");
+        System.out.println("In which \nFuel charging cost is: " + fuelPricePerLiter * FuelStation.fuelCharging + "$");
+         System.out.println("And insurance fee is: " +  MasterClass.insurance);
     }
 }
